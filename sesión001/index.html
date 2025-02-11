@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 001</title>
+
+  <link rel="stylesheet" href="statics/CSS/style.css">
+</head>
+
+<body>
+  <section id="title">
+    <h1>Redescubriendo <br><span>Javascript</span></h1>
+    <hr>
+  </section>
+
+  <section id="middle">
+    <div class="container-insade">
+      <button type="button"><a href="#">Excercicios!</a></button>
+      <button type="button"><a href="#">Conceptos</a></button>
+      <button type="button"><a href="#">Programas Cortos!</a></button>
+    </div>
+  </section>
+
+  <div class="container-insade">
+    <h1>Usando Alertas y variables</h1>
+
+    <div class="container-insade">
+      
+      <script>
+        function hazLaSuma() {
+          let sumando1 = document.getElementById("sumando1").innerHTML
+          let sumando2 = document.getElementById("sumando2").innerHTML
+          let resultado = Number(sumando1) + Number(sumando2)
+          
+          let resultadoDom = document.getElementById("suma-resultado")
+          resultadoDom.innerHTML = resultado
+        }
+      </script>
+
+      <p>
+        <button type="button" onclick="hazLaSuma()">Realiza la suma</button>
+        <span id="sumando1">1</span> + <span id="sumando2">2</span> = <span id="suma-resultado">result</span>
+      </p>
+    </div>
+
+
+    <div class="container-insade">
+      
+      <script>
+        function hazLaResta() {
+          let minuendo = document.getElementById("minuendo").innerHTML
+          let sustraendo = document.getElementById("sustraendo").innerHTML
+
+          let resultado = Number(minuendo) - Number(sustraendo)
+
+          let restaResultado = document.getElementById("resta-resultado")
+          restaResultado.innerHTML = resultado
+        }
+      </script>
+
+      <p>
+        <button type="button" onclick="hazLaResta()">Realiza la resta</button>
+        <span id="minuendo">15</span> - <span id="sustraendo">2</span> = <span id="resta-resultado">result</span>
+      </p>
+    </div>
+
+    <div class="container-insade">
+      <h1>Operadores matemáticos</h1>
+      <div class="container-insade">
+        <div class="container-flex">
+          <input type="text" name="numero1" id="numero1" placeholder="escribe un numero">
+          <label for="">-</label>
+          <input type="text" name="numero2" id="numero2" placeholder="escribe un segundo numero">
+          <label for="">=</label>
+          <input type="text" name="resultado" id="resultado" disabled="true">
+        </div>
+        <div class="container-flex">
+          <button type="button" onclick="suma()">Suma (+)</button>
+          <button type="button" onclick="resta()">Resta (-)</button>
+          <button type="button" onclick="multiplicacion()">Multiplicacion (*)</button>
+          <button type="button" >Modulo Operador (%)</button>
+          <button type="button" onclick="division()">División (/)</button>
+        </div>
+      </div>
+      <script>
+        function suma() {
+          let numero1 = Number(document.getElementById("numero1").value)
+          let numero2 = Number(document.getElementById("numero2").value)
+
+          let resultadoOperacion = numero1 + numero2;
+          let resultadoNodo = document.getElementById("resultado")
+          resultadoNodo.value = resultadoOperacion
+         }
+        function resta() {
+        let numero1 = Number(document.getElementById("numero1").value)
+          let numero2 = Number(document.getElementById("numero2").value)
+
+          let resultadoOperacion = numero1 - numero2
+          document.getElementById("resultado").value = resultadoOperacion
+        }
+        
+        function multiplicacion() { 
+            let numero1 = Number(document.getElementById("numero1").value)
+          let numero2 = Number(document.getElementById("numero2").value)
+
+          let resultadoOperacion = numero1 * numero2
+          document.getElementById("resultado").value = resultadoOperacion
+        }
+        function division() { 
+            let numero1 = Number(document.getElementById("numero1").value)
+          let numero2 = Number(document.getElementById("numero2").value)
+
+          let resultadoOperacion = numero1 / numero2
+          document.getElementById("resultado").value = resultadoOperacion
+        }
+        function moduloOperador() { }
+      </script>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
