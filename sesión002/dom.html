@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 002</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <section id="title">
+        
+        <br>
+        <h1>Sesion 003<br><span>JavaScript</span>
+        <br><span>DOM</span></h1>
+        <hr>
+
+        <section id="middle">
+            <div class="container-insade">
+              <button type="button"><a href="./index.html">Home</a></button>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="middle">
+        <div class="container-insade">
+            <div class="container-insade" id="DOM-BOX">
+                <h2>Tocando el DOM</h2>
+                <button onclick="cambioTitulo()">Cambiame el título</button>
+                <button onclick="cambioTitulo(color=true)">Cambiame el color</button>
+                
+                <button type="button" onclick="seleccionarTodosLosInputs()">Marca todo</button>
+                <button type="button" onclick="mangoAKiwi()">mango a kiwi</button>
+
+                <div class="container-flex">
+                    <fieldset>
+                        <legend>Elige tu comida favorita</legend>
+                        <div>
+                            <label for="Manzana">Manzanas</label>
+                            <input type="checkbox" id="apple">
+                        </div>
+                        <div>
+                            <label for="Kiwi">Kiwi</label>
+                            <input type="checkbox" id="Kiwi">
+                        </div>
+                        <div>
+                            <label for="mango">Mango</label>
+                            <input type="checkbox" id="mango">
+                        </div>
+                    </fieldset>
+                    <div>
+                        <ul>
+                            <li>Apple</li>
+                            <li>Kiwi</li>
+                            <li>Mango</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="static/js/jsAndCss.js"></script>
+</body>
+</html>
