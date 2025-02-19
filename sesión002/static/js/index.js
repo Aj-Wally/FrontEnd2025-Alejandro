@@ -1,26 +1,49 @@
-
 let contador = -1
 let fizzBuzz = []
 
+function cambiarParagraph(contenido='Fizz Buzz:'){
+    // recibir un parametro, string
+    // asignado al node con id 'fizzBuzzResult'
+    let nodeParrafo = document.getElementById('fizzBuzzResult');
+    nodeParrafo.innerHTML = contenido
+}
+
 function pintarEnPantalla() {
-    //Encargada de modificar el paragrahp "fizzBuzzResult"
+    cambiarParagraph(
+        'Fizz Buzz: ' + fizzBuzz.join(', ')
+    )
 }
 
 function esFizzOEsBuzz(num) {
-    // Encrgad de devolver, fizz, buzz o el numero
-    // si es multiplo de 3, devolver fizz
-    // si es multiplo de 5, devolver buzz
-    // si es multiplo de 3 y 5, devolver fizzBuzz
+    if(num === 0){
+     return num
+    }else if(num % 3 === 0 && num % 5 === 0 ){
+        return 'fizzBuzz'
+    }else if(num % 3 === 0){
+        return 'fizz'
+    }else if(num % 5 === 0){
+        return 'buzz'
+    }
+    
+    return num
 }
 
 function siguiente(){
-    // añadir un siguiente numero a la array fizzBuzz
+    fizzBuzz.push(
+        esFizzOEsBuzz(++contador)
+    )
+    pintarEnPantalla()
 }
 
-function siguienteN(rondas){
-    // encargada de llamar de manera iterada, a la funcion siguiente
+function siguienteN(rondas=10){
+    for (let index = 0; index < rondas; index++) {
+        siguiente()
+    }
 }
 
 function limpiar(){
     //encargada de vaciar la lista fizzBuzz, y limpiar el paragrahp
+    fizzBuzz = []
+    contador = -1
+    cambiarParagraph()
 }
